@@ -3,6 +3,7 @@
 
   const data = window.REPORT_DATA;
   if (!data) return;
+  document.title = `${data.meta.title}｜${data.meta.issue}`;
 
   const byId = (id) => document.getElementById(id);
   const escapeHtml = (value) =>
