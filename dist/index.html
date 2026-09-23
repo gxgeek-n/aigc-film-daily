@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="AIGC影视情报日报 2026年9月19日核验版：电影节、产业政策、生产工具与工作流信号。"
+      content="AIGC影视情报日报 2026年9月23日核验版：12条情报线覆盖作品、受众、模型工具、工作流、成本、发行、权利与电影节。"
     />
     <meta name="theme-color" content="#f3efe6" />
-    <title>AIGC影视情报日报｜2026.09.19 核验版</title>
+    <title>AIGC影视情报日报｜2026.09.23 核验版</title>
     <link
       rel="icon"
       type="image/svg+xml"
@@ -35,8 +35,9 @@
         <a href="#judgment">今日判断</a>
         <a href="#lead">头条</a>
         <a href="#briefs">简报</a>
-        <a href="#workflow">工作流</a>
-        <a href="#watchlist">观察日历</a>
+        <a href="#intel">12条情报线</a>
+        <a href="#catalog">作品目录</a>
+        <a href="#coverage">覆盖状态</a>
         <a href="#method">来源与方法</a>
       </nav>
     </header>
@@ -52,12 +53,12 @@
           <div class="cover-thesis">
             <span class="kicker">今日主命题</span>
             <p id="cover-thesis"></p>
-            <a class="text-link" href="#lead">阅读证据链 <span aria-hidden="true">↘</span></a>
+            <a class="text-link" href="#intel">浏览12条情报线 <span aria-hidden="true">↘</span></a>
           </div>
         </div>
         <div class="cover-footer">
           <p id="cover-window"></p>
-          <p>中国及海外 · 作品与机构 · 工具与政策 · 社区信号</p>
+          <p>12条情报线 · 作品与受众 · 模型与工作流 · 成本与发行 · 权利与节展</p>
         </div>
       </section>
 
@@ -88,9 +89,81 @@
         <div class="brief-grid" id="brief-grid"></div>
       </section>
 
+      <section id="intel" class="section intel-section" aria-labelledby="intel-title">
+        <div class="section-heading">
+          <p class="section-index">04 / Intelligence Lanes</p>
+          <h2 id="intel-title">12条情报线</h2>
+          <p>每条线都给出核验状态；缺失即标注缺失。</p>
+        </div>
+        <p class="module-note" id="intel-note"></p>
+        <div class="module-chips" id="module-chips" aria-label="模块导航"></div>
+        <div class="lane-grid" id="lane-grid"></div>
+      </section>
+
+      <section id="catalog" class="section module-section" aria-labelledby="catalog-title">
+        <div class="section-heading">
+          <p class="section-index">05 / Work Catalog</p>
+          <h2 id="catalog-title">作品与创作者目录</h2>
+          <p>只登记有来源的具名作品或项目。</p>
+        </div>
+        <p class="module-note"><span id="catalog-status"></span><span id="catalog-note"></span></p>
+        <div id="catalog-table"></div>
+      </section>
+
+      <section id="platform" class="section module-section platform-section" aria-labelledby="platform-title">
+        <div class="section-heading">
+          <p class="section-index">06 / Platform Samples</p>
+          <h2 id="platform-title">平台样本面板</h2>
+          <p>没有可比口径时，明确留空而不填零。</p>
+        </div>
+        <p class="module-note" id="platform-note"></p>
+        <div id="platform-table"></div>
+      </section>
+
+      <section id="economics" class="section module-section" aria-labelledby="economics-title">
+        <div class="section-heading">
+          <p class="section-index">07 / Production Economics</p>
+          <h2 id="economics-title">生产经济</h2>
+          <p>成本口径缺失时不做换算估算。</p>
+        </div>
+        <p class="module-note" id="economics-note"></p>
+        <div id="economics-table"></div>
+      </section>
+
+      <section id="commercial" class="section module-section" aria-labelledby="commercial-title">
+        <div class="section-heading">
+          <p class="section-index">08 / Distribution &amp; Commercialization</p>
+          <h2 id="commercial-title">发行与商业化</h2>
+          <p>规划披露与已交付能力分开标注。</p>
+        </div>
+        <p class="module-note" id="commercial-note"></p>
+        <div id="commercial-list"></div>
+      </section>
+
+      <section id="rights" class="section module-section rights-section" aria-labelledby="rights-title">
+        <div class="section-heading">
+          <p class="section-index">09 / Rights &amp; Compliance</p>
+          <h2 id="rights-title">权利与合规</h2>
+          <p>无核验事件时留空，只列检查项。</p>
+        </div>
+        <p class="module-note"><span id="rights-status"></span><span id="rights-note"></span></p>
+        <div id="rights-list"></div>
+        <div id="rights-checks"></div>
+      </section>
+
+      <section id="incidents" class="section module-section" aria-labelledby="incidents-title">
+        <div class="section-heading">
+          <p class="section-index">10 / Incidents &amp; Failures</p>
+          <h2 id="incidents-title">故障与事故</h2>
+          <p>只记录已核验的故障与可用性变更。</p>
+        </div>
+        <p class="module-note" id="incidents-note"></p>
+        <div id="incidents-list"></div>
+      </section>
+
       <section id="workflow" class="section workflow-section" aria-labelledby="workflow-title">
         <div class="section-heading">
-          <p class="section-index">04 / Production Signal</p>
+          <p class="section-index">11 / Production Signal</p>
           <h2 id="workflow-title">工作流信号</h2>
           <p>生成能力之外，交付可靠性正在前移。</p>
         </div>
@@ -99,7 +172,7 @@
 
       <section id="radar" class="section radar-section" aria-labelledby="radar-title">
         <div class="section-heading">
-          <p class="section-index">05 / Platform Radar</p>
+          <p class="section-index">12 / Platform Radar</p>
           <h2 id="radar-title">平台与社区雷达</h2>
           <p>没有可比口径时，明确留空。</p>
         </div>
@@ -108,16 +181,28 @@
 
       <section id="watchlist" class="section watchlist-section" aria-labelledby="watchlist-title">
         <div class="section-heading light-heading">
-          <p class="section-index">06 / Watch Calendar</p>
+          <p class="section-index">13 / Watch Calendar</p>
           <h2 id="watchlist-title">观察日历</h2>
           <p>需要提前准备或持续观察的节点。</p>
         </div>
         <ol class="timeline" id="timeline"></ol>
       </section>
 
+      <section id="coverage" class="section module-section coverage-section" aria-labelledby="coverage-title">
+        <div class="section-heading">
+          <p class="section-index">14 / Coverage Status</p>
+          <h2 id="coverage-title">覆盖状态</h2>
+          <p>12条情报线的可得性与已知缺口。</p>
+        </div>
+        <p class="module-note" id="coverage-note"></p>
+        <div class="coverage-summary" id="coverage-summary"></div>
+        <div id="coverage-table"></div>
+        <div id="coverage-gaps"></div>
+      </section>
+
       <section id="method" class="section method-section" aria-labelledby="method-title">
         <div class="section-heading">
-          <p class="section-index">07 / Sources & Method</p>
+          <p class="section-index">15 / Sources &amp; Method</p>
           <h2 id="method-title">来源与方法</h2>
           <p>每条来源都可点击回查。</p>
         </div>
