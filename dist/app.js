@@ -158,6 +158,23 @@
     )
     .join("");
 
+  // ---- Time-layered news stream + source registry ----------------------------
+  const news = window.NewsStream;
+  const registry = window.SOURCE_REGISTRY;
+  if (news) {
+    set(
+      "news-note",
+      escapeHtml(data.newsStream && data.newsStream.layerNote ? data.newsStream.layerNote : "三个时间层固定呈现，缺失层如实留空。")
+    );
+    set("news-layers", news.renderStream(data.newsStream, registry));
+  }
+  if (news && registry) {
+    set("registry-note", escapeHtml(registry.note || ""));
+    set("registry-summary", news.registrySummary(registry));
+    set("registry-legend", news.registryLegend(registry));
+    set("registry-table", news.renderRegistry(registry));
+  }
+
   // ---- 04 Intelligence lanes -------------------------------------------------
   const intel = data.intel || {};
   const lanes = intel.lanes || [];

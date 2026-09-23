@@ -178,5 +178,103 @@ window.REPORT_DATA = {
     sora: { title: "Sora discontinuation", publisher: "OpenAI", url: "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation" },
     beijing: { title: "2026北京动画周亦庄会场", publisher: "北京市大兴区", url: "https://chanye.bjdx.gov.cn/chanye/qyfw8/cydt/2420251/index.html" },
     runway: { title: "Runway AI Summit", publisher: "Runway", url: "https://summit.runwayml.com/" }
+  },
+
+  newsStream: {
+    layerNote: "时间层与日报窗口分开标注：24小时层为本期窗口，72小时层与本周层用于持续跟踪。",
+    layers: [
+      {
+        id: "h24",
+        window: "2026-09-22 12:45 → 09-23 12:45（北京时间）",
+        note: "与本期日报窗口一致，条目全部来自本期已核验简报。",
+        items: [
+          { id: "d1", time: "09-22 14:21", title: "Pika Video Studio 把参考资产与多镜头组织进同一工作台",
+            level: "B", origin: "本期日报 · 头条",
+            fact: "官网展示参考角色、产品、场景与风格可进入同一流程，并标注最长3分钟多镜头输出；AIVIDEO.NEWS于9月22日14:21发布更新报道。",
+            note: "3分钟为厂商表述，不等于任何题材都能稳定保持连续性。",
+            sources: ["aivideo", "vendor"], refs: ["pika", "aivideo"] },
+          { id: "d2", time: "09-22", title: "Hugging Face 日论文聚焦视频世界一致性与视频Agent",
+            level: "研究线索", origin: "本期日报 · 简报03",
+            fact: "9月22日日论文中出现WorldCrafter、VideoGen-Agent及视频扩散物理违背机制研究。",
+            note: "论文属研究线索，不等于产品发布或独立评测。",
+            sources: ["huggingface"], refs: ["hf"] },
+          { id: "d3", time: "09-22", title: "AI International Film Festival 常规投稿节点到期",
+            level: "A", origin: "本期日报 · 简报02",
+            fact: "主办方页面列出9月22日常规截止、11月14日放映节点，并维持月度竞赛机制。",
+            sources: ["governance"], refs: ["aiff"] },
+          { id: "d4", time: "09-22", title: "成都AI文娱大会会后报道披露拟建“织梦星球”平台",
+            level: "C", origin: "本期日报 · 简报01",
+            fact: "9月22日发布的会后报道回顾成都AI文娱大会，并披露拟建设连接IP创作、生产工具与海外发行的“织梦星球”平台。",
+            note: "规划披露不等于已上线产品。",
+            sources: ["dailyeconomic"], refs: ["chengdu"] },
+          { id: "d5", time: "09-22", title: "创作者继续争论AI长片的成本与创意门槛",
+            level: "D", origin: "本期日报 · 简报04",
+            fact: "r/aifilmmaking于9月22日出现AI长片未来讨论，观点集中在降本并不自动带来叙事质量。",
+            note: "社区样本并非行业统计，不外推市场规模。",
+            sources: ["reddit"], refs: ["reddit"] }
+        ]
+      },
+      {
+        id: "h72",
+        window: "2026-09-20 12:45 → 09-23 12:45（北京时间）",
+        note: "超出日报24小时窗口的事件在本层单独标注，仅作背景与跟踪，不计入本期头条证据。",
+        items: [
+          { id: "d6", time: "09-20", title: "上海启动100小时AI微短剧创作活动",
+            level: "C", origin: "来源池观察 · 澎湃新闻",
+            fact: "澎湃新闻报道活动于9月20日启动；产出作品、完成率、版权清单与团队分工未公开。",
+            note: "活动启动不等于已完成交付。",
+            sources: ["thepaper"], refs: ["shanghai"] },
+          { id: "d7", time: "09-21", title: "Autodesk公开演示片出现无法通过提示修复的连续性错误",
+            level: "B", origin: "来源池观察 · Creative Bloq",
+            fact: "Autodesk高管确认角色在相邻镜头中的座位位置变化，团队未能通过提示词消除。",
+            note: "厂商自述个例，不能外推为全部工具的能力上限。",
+            sources: ["creativebloq"], refs: ["autodesk"] },
+          { id: "d13", time: "09-22", title: "AI复刻已故演员形象再度引发本人家属反对",
+            level: "B", origin: "来源池观察 · Variety",
+            fact: "Variety报道，Robin Williams之女公开反对网络继续传播以其父亲形象生成的AI视频。",
+            note: "这是人格与形象权风险信号，不代表新的法律裁判或统一平台政策。",
+            sources: ["variety"], refs: ["varietylikeness"] },
+          { id: "d14", time: "09-22榜期", title: "真人AI剧聚合榜提供日榜样本",
+            level: "D", origin: "来源池观察 · 铭兴映画",
+            fact: "页面标示榜单周期为9月22日，并提供30部剧目的日播放、总播放和题材字段。",
+            note: "属于开放数据聚合，只用于发现候选作品，不能替代平台原始数据。",
+            sources: ["mingxing"], refs: ["mingxingrank"] },
+          { id: "d15", time: "09-22更新", title: "海外短剧App与近七日热推剧获得新的聚合快照",
+            level: "D", origin: "来源池观察 · Short Drama Data",
+            fact: "页面显示9月22日App排名快照，并列出近七日英语热推剧候选。",
+            note: "综合分不等于下载量、收入或市场份额，仅作出海发行线索。",
+            sources: ["shortdrama"], refs: ["shortdramarank"] }
+        ]
+      },
+      {
+        id: "week",
+        window: "2026-09-17 → 09-23 12:45（北京时间）",
+        note: "本周持续跟踪层汇总跨窗仍在推进的条目，均为已披露事实或已排定节点。",
+        items: [
+          { id: "d8", time: "09-18", title: "BytePlus LAS 1.5.3 新增分镜脚本与视频重混",
+            level: "A", origin: "周报窗口复用 · 发布说明",
+            fact: "9月18日说明新增分镜脚本生成、智能视频重混和长视频反向提取角色与场景。",
+            note: "发布说明证明功能上线，不证明在真实项目中稳定可用。",
+            sources: ["vendor"], refs: ["las"] },
+          { id: "d9", time: "09-19—21", title: "Hypit 连续五个版本集中修复失败恢复",
+            level: "A", origin: "周报窗口复用 · 发布日志",
+            fact: "v0.2.8—v0.2.12覆盖参考校验、异步等待、429/5xx重试与Retry-After。",
+            sources: ["github"], refs: ["hypit"] },
+          { id: "d10", time: "09-24", title: "OpenAI Sora 旧API计划停止服务",
+            level: "A", origin: "本期日报 · 观察日历",
+            fact: "官方帮助中心列出Sora旧接口停止服务说明，计划9月24日生效。",
+            note: "需核对存量调用与替代路径。",
+            sources: ["vendor"], refs: ["sora"] },
+          { id: "d11", time: "09-24—25", title: "北京动画周亦庄AIGC特色会场",
+            level: "A", origin: "本期日报 · 观察日历",
+            fact: "会场将于9月24—25日举行；工具链与交付数据待会后披露。",
+            sources: ["governance"], refs: ["beijing"] },
+          { id: "d12", time: "09-30", title: "Runway AI Summit",
+            level: "B", origin: "本期日报 · 观察日历",
+            fact: "官方活动页列出9月30日 summit，企业工作流与政策议题为观察重点。",
+            sources: ["vendor"], refs: ["runway"] }
+        ]
+      }
+    ]
   }
 };

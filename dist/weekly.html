@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="report-data.js" defer></script>
     <script src="weekly-data.js" defer></script>
+    <script src="source-registry.js" defer></script>
     <script src="app.js" defer></script>
   </head>
   <body>
@@ -36,6 +37,8 @@
         <a href="#judgment">今日判断</a>
         <a href="#lead">头条</a>
         <a href="#briefs">简报</a>
+        <a href="#news">分层情报流</a>
+        <a href="#registry">来源库</a>
         <a href="#intel">12条情报线</a>
         <a href="#catalog">作品目录</a>
         <a href="#coverage">覆盖状态</a>
@@ -88,6 +91,31 @@
           <p>只保留窗口内有明确来源的新增信号。</p>
         </div>
         <div class="brief-grid" id="brief-grid"></div>
+      </section>
+
+      <section id="news" class="section news-section" aria-labelledby="news-title">
+        <div class="section-heading">
+          <p class="section-index">News Stream / Time Layers</p>
+          <h2 id="news-title">分层情报流</h2>
+          <p>按24小时、72小时与本周三层固定呈现；无核验条目的层如实留空，不用搜索摘要补位。</p>
+        </div>
+        <p class="module-note" id="news-note"></p>
+        <div class="news-layers" id="news-layers"></div>
+      </section>
+
+      <section id="registry" class="section module-section registry-section" aria-labelledby="registry-title">
+        <div class="section-heading">
+          <p class="section-index">Source Registry / 来源库</p>
+          <h2 id="registry-title">来源池与核验角色</h2>
+          <p>区分可作为最终证据的一手来源、需互证的媒体来源，以及仅作线索的聚合来源。</p>
+        </div>
+        <p class="module-note" id="registry-note"></p>
+        <div class="coverage-summary" id="registry-summary"></div>
+        <div id="registry-legend"></div>
+        <div id="registry-table"></div>
+        <p class="module-note registry-more">
+          <a class="text-link" href="sources.html">查看完整来源库、角色说明与分层情报流 <span aria-hidden="true">↘</span></a>
+        </p>
       </section>
 
       <section id="intel" class="section intel-section" aria-labelledby="intel-title">

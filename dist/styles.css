@@ -196,10 +196,12 @@ a:hover { color: var(--accent-dark); }
   .site-header { min-height: 4rem; }
   .wordmark span:last-child { font-size: 0.9rem; }
   .cover { min-height: auto; padding-top: 2rem; }
+  .cover-meta { flex-wrap: wrap; gap: 0.75rem; }
+  .status-pill { max-width: 100%; overflow-wrap: anywhere; }
   .cover-grid { gap: 3rem; padding: 3.5rem 0; }
   .cover h1 { font-size: clamp(3.45rem, 14.7vw, 4.1rem); }
   .cover-thesis { padding-left: 1rem; }
-  .cover-thesis p { font-size: 1.65rem; }
+  .cover-thesis p { max-width: 100%; overflow-wrap: anywhere; font-size: 1.65rem; }
   .cover-footer { gap: 1rem; }
   .cover-footer p:last-child { text-align: left; }
   .section { padding: 4.5rem 5vw; }
@@ -362,4 +364,76 @@ a:hover { color: var(--accent-dark); }
   a { color: #000; text-decoration: none; }
   .source-links a { border-color: #777; }
   .source-links a::after, .source-index a::after { content: " (" attr(href) ")"; font-size: 8pt; font-weight: 400; overflow-wrap: anywhere; }
+}
+
+/* ---------- Time-layered news stream ---------- */
+
+.news-section { background: #faf8f2; }
+.news-layers { display: grid; gap: 2rem; }
+.news-layer { padding: clamp(1.2rem, 2.6vw, 2.2rem); border: 1px solid var(--ink); background: var(--paper); }
+.news-layer-head { display: flex; flex-wrap: wrap; gap: 0.8rem 2rem; align-items: flex-end; justify-content: space-between; padding-bottom: 1rem; border-bottom: 1px solid var(--ink); }
+.news-layer-index { margin: 0 0 0.4rem; color: var(--accent-dark); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+.news-layer-head h3 { margin: 0; font-family: var(--serif); font-size: clamp(1.7rem, 3vw, 2.6rem); line-height: 1.05; letter-spacing: -0.035em; }
+.news-layer-meta { display: flex; flex-wrap: wrap; gap: 0.5rem 0.9rem; align-items: baseline; color: var(--ink-soft); font-size: 0.78rem; }
+.news-window { font-weight: 700; }
+.news-count { padding: 0.16rem 0.45rem; border: 1px solid var(--line); font-weight: 800; letter-spacing: 0.06em; }
+.news-layer-note { margin: 1rem 0 0; color: var(--ink-soft); font-size: 0.85rem; }
+.news-items { display: grid; gap: 0; }
+.news-item { padding: 1.4rem 0; border-bottom: 1px solid var(--line); }
+.news-item:last-child { border-bottom: 0; }
+.news-item header { display: flex; flex-wrap: wrap; gap: 0.45rem 0.9rem; align-items: center; }
+.news-item time { font-family: var(--serif); font-size: 1.15rem; color: var(--accent); }
+.news-level, .news-origin { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.06em; }
+.news-level { color: var(--ink-soft); }
+.news-origin { padding: 0.14rem 0.42rem; background: var(--paper-deep); }
+.news-item h4 { margin: 0.7rem 0 0.5rem; font-family: var(--serif); font-size: clamp(1.15rem, 1.9vw, 1.5rem); line-height: 1.3; letter-spacing: -0.02em; }
+.news-item p { margin: 0; color: var(--ink-soft); font-size: 0.92rem; }
+.news-note { margin-top: 0.5rem !important; font-size: 0.82rem !important; font-style: italic; }
+.news-item .source-links { margin-top: 1rem; }
+.news-cross { margin: 1.2rem 0 0; }
+.news-layer .empty-state { margin-top: 1.2rem; }
+
+/* ---------- Source registry ---------- */
+
+.registry-section { background: var(--paper-deep); }
+.registry-legend { margin-block: 0 1.8rem; padding: 1.2rem 1.4rem; border: 1px solid var(--ink); background: var(--paper); }
+.registry-legend h3 { margin: 0 0 0.7rem; font-family: var(--serif); font-size: 1.3rem; }
+.registry-legend ul { margin: 0; padding-left: 1.1rem; }
+.registry-legend li { color: var(--ink-soft); font-size: 0.88rem; }
+.registry-legend li + li { margin-top: 0.5rem; }
+.registry-summary, #registry-summary p { margin: 0; font-size: 0.95rem; }
+#registry-summary b { color: var(--accent-dark); font-family: var(--serif); font-size: 1.1rem; }
+
+.registry-table { background: var(--paper); }
+.registry-table td:nth-child(2) { min-width: 0; }
+.reg-name { font-family: var(--serif); font-size: 1.05rem; }
+.role-badge { display: inline-block; padding: 0.16rem 0.5rem; border: 1px solid currentColor; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.06em; white-space: nowrap; }
+.role-primary { color: #2f6b3a; }
+.role-corroboration { color: var(--accent-dark); }
+.role-discovery { color: #8a5a00; }
+.role-short { display: block; margin-top: 0.35rem; color: var(--ink-soft); font-size: 0.72rem; }
+.registry-row.is-discovery { background: rgba(138, 90, 0, 0.06); }
+.registry-row.is-discovery .reg-name::after { content: " · 仅线索"; color: #8a5a00; font-family: var(--sans); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.06em; }
+.link-hint { display: block; margin-top: 0.3rem; color: var(--ink-soft); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.08em; }
+.registry-more { margin-block: 1.8rem 0 !important; }
+
+.role-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1.6rem; }
+.role-card { padding: 1.2rem; border: 1px solid var(--ink); background: var(--paper); }
+.role-card h3 { margin: 0 0 0.5rem; font-family: var(--serif); font-size: 1.3rem; }
+.role-card p { margin: 0; color: var(--ink-soft); font-size: 0.86rem; }
+.role-count { display: block; margin-top: 0.9rem; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; }
+
+@media (max-width: 900px) {
+  .role-cards { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 760px) {
+  .news-layer-head { align-items: flex-start; }
+  .news-item .source-links a { font-size: 0.7rem; }
+}
+
+@media print {
+  .news-layer, .news-item, .registry-row, .role-card { break-inside: avoid; }
+  .news-section, .registry-section, .news-layer, .registry-legend, .registry-table, .role-card { background: #fff !important; }
+  .registry-row.is-discovery { background: #fff !important; }
 }

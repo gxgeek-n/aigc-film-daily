@@ -175,3 +175,72 @@ d.sources = {
   ,"noon-ai": { title: "正午阳光招聘AI影视全流程岗位", publisher: "娱乐资本论 / 新浪财经", url: "https://cj.sina.com.cn/articles/view/5159017394/133805bb200101t1tq" }
   ,"autodesk-continuity": { title: "Autodesk AI demo film continuity error", publisher: "Creative Bloq", url: "https://www.creativebloq.com/3d/autodesks-own-ai-film-has-a-continuity-error-nobody-could-prompt-away" }
 };
+
+d.newsStream = {
+  layerNote: "周报窗口为9月17—23日；24小时层不由本报独立维护，如实留空并指向日报。",
+  layers: [
+    {
+      id: "h24",
+      window: "2026-09-22 12:45 → 09-23 12:45（北京时间）",
+      emptyText: "周报以下方72小时与本周为口径，未独立维护24小时层；该窗口的核验条目见AIGC影视情报日报。",
+      crossLink: { label: "查看日报的24小时层", href: "index.html#news" },
+      items: []
+    },
+    {
+      id: "h72",
+      window: "2026-09-20 12:45 → 09-23 12:45（北京时间）",
+      note: "本层仅收录本周窗口内可定位到日期、且落在72小时内的条目。",
+      items: [
+        { id: "w1", time: "09-21", title: "Autodesk公开演示片出现无法通过提示修复的连续性错误",
+          level: "B", origin: "本周周报 · 故障与事故",
+          fact: "Autodesk高管确认角色在相邻镜头中的座位位置变化，团队未能通过提示词消除。",
+          note: "厂商自述个例，不能外推为全部工具的能力上限。",
+          sources: ["creativebloq"], refs: ["autodesk"] }
+      ]
+    },
+    {
+      id: "week",
+      window: "2026-09-17 → 09-23 12:45（北京时间）",
+      note: "本周持续跟踪层汇总跨窗仍在推进的条目，均为已披露事实或已排定节点。",
+      items: [
+        { id: "w2", time: "09-18", title: "BytePlus Dramagic 连接脚本、资产、分镜与预览",
+          level: "A", origin: "本周周报 · 简报01",
+          fact: "官方将其定位为短剧与影视生产的一体化AIGC平台。",
+          sources: ["vendor"], refs: ["dramagic"] },
+        { id: "w3", time: "09-18", title: "BytePlus LAS 1.5.3 新增分镜脚本与视频重混",
+          level: "A", origin: "本周周报 · 简报02",
+          fact: "9月18日说明新增分镜脚本生成、智能视频重混和长视频反向提取角色与场景。",
+          note: "发布说明证明功能上线，不证明在真实项目中稳定可用。",
+          sources: ["vendor"], refs: ["las"] },
+        { id: "w4", time: "09-19—21", title: "Hypit 连续五个版本集中修复失败恢复",
+          level: "A", origin: "本周周报 · 简报03",
+          fact: "v0.2.8—v0.2.12覆盖参考校验、异步等待、429/5xx重试与Retry-After。",
+          note: "发布日志证明代码变更，不证明所有环境稳定。",
+          sources: ["github"], refs: ["hypit"] },
+        { id: "w5", time: "本周", title: "《蝴蝶梦》《天女之梦》上线分账披露",
+          level: "C", origin: "本周周报 · 作品目录",
+          fact: "媒体披露两部AIGC网络故事片片长均超60分钟，上线10天累计分账超过600万元，制作规模三四十人、不到四个月。",
+          note: "单一行业作者披露，未取得平台后台或审计口径。",
+          sources: ["thepaper"], refs: ["soulferry"] },
+        { id: "w6", time: "本周", title: "正午阳光招聘AI影视全流程岗位",
+          level: "C", origin: "本周周报 · 人才与基础设施",
+          fact: "招聘报道显示岗位已细分到AI影视制片、视效、剪辑、三维资产和智能体开发。",
+          sources: ["sinafinance"], refs: ["noonai"] },
+        { id: "w7", time: "09-17—23", title: "多地AI影像活动同周推进展映与竞赛",
+          level: "A", origin: "本周周报 · 简报05",
+          fact: "首尔、罗马、拉各斯、Tempe等活动推进展映、竞赛与交流。",
+          note: "生成说明、字幕、剧照与权利链成为标准交付。",
+          sources: ["governance"], refs: ["next", "aifilm3"] },
+        { id: "w8", time: "09-24", title: "OpenAI Sora 旧API计划停止服务",
+          level: "A", origin: "本周周报 · 故障与事故",
+          fact: "官方帮助中心列出Sora旧接口停止服务说明，计划9月24日生效。",
+          sources: ["vendor"], refs: ["sora"] },
+        { id: "w9", time: "09-18更新", title: "SceneTrace AI短剧Top 100补充具名作品候选池",
+          level: "D", origin: "来源池观察 · SceneTrace",
+          fact: "榜单列出100部AI标记短剧，并把公开榜单、目录信号与部分公开互动数据并列展示。",
+          note: "其热度仅用于排序发现，不等于播放量；具名作品需回到平台页复核。",
+          sources: ["scenetrace"], refs: ["scenetracerank"] }
+      ]
+    }
+  ]
+};
