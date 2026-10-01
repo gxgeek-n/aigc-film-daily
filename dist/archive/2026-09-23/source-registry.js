@@ -30,7 +30,7 @@
   ];
 
   const SOURCE_REGISTRY = {
-    version: "2026-10-02",
+    version: "2026-09-23",
     note:
       "来源池用于持续发现与交叉核验，不等同于当期证据。角色为“仅线索”的聚合来源不得单独支撑最终结论；一手来源的原始页面可作A级证据。",
     legend: [
@@ -110,36 +110,6 @@
       ,{ id: "sinafinance", name: "新浪财经 / 娱乐资本论转载", region: "国内", category: "trade", cadence: "事件驱动",
         role: "corroboration", url: "https://finance.sina.com.cn/",
         rule: "转载采访与招聘观察按C级；岗位、薪资与项目推断需回查公司或招聘原页。" }
-      ,{ id: "openai", name: "OpenAI产品与帮助中心", region: "国际", category: "oss", cadence: "事件驱动",
-        role: "primary", url: "https://help.openai.com/",
-        rule: "产品上线、停服与迁移说明按A级；计划日期与实际生效状态分开核验。" }
-      ,{ id: "runway", name: "Runway News / Dev Changelog", region: "国际", category: "oss", cadence: "每周 / 事件驱动",
-        role: "primary", url: "https://runway.com/news",
-        rule: "产品与API发布按A级；效果与客户案例属于公司自报，必须保留主体。" }
-      ,{ id: "googleresearch", name: "Google Research / DeepMind", region: "国际", category: "eval", cadence: "每周",
-        role: "primary", url: "https://research.google/blog/",
-        rule: "研究发布与论文按A级原始资料；基准结论须标注发布方自测。" }
-      ,{ id: "elevenlabs", name: "ElevenLabs Blog / API", region: "国际", category: "oss", cadence: "每周 / 事件驱动",
-        role: "primary", url: "https://elevenlabs.io/blog",
-        rule: "语音、视频与模板API发布按A级；演员声音授权需独立核验。" }
-      ,{ id: "arxiv", name: "arXiv · 视频生成论文", region: "国际", category: "eval", cadence: "每日",
-        role: "primary", url: "https://arxiv.org/list/cs.CV/recent",
-        rule: "论文存在与版本日期按A级；性能结果为作者自报，不能写成独立复现。" }
-      ,{ id: "equity", name: "Equity（英国演员工会）", region: "国际", category: "governance", cadence: "事件驱动",
-        role: "primary", url: "https://www.equity.org.uk/news/",
-        rule: "工会公告与已签协议按A级；谈判进展不得写成已生效合同。" }
-      ,{ id: "nrta", name: "国家广播电视总局", region: "国内", category: "governance", cadence: "事件驱动",
-        role: "primary", url: "https://www.nrta.gov.cn/",
-        rule: "正式办法、通知与活动公告按A级；会议倡议不等同已生效规则。" }
-      ,{ id: "cninfo", name: "巨潮资讯 / 交易所公告", region: "国内", category: "data", cadence: "事件驱动",
-        role: "primary", url: "https://www.cninfo.com.cn/",
-        rule: "上市公司公告按A级；计划、预测与公司自报经营数据不得写成已实现结果。" }
-      ,{ id: "bilibili", name: "Bilibili作品页", region: "国内", category: "data", cadence: "抓取快照",
-        role: "primary", url: "https://www.bilibili.com/",
-        rule: "发布日期、AI标识和页面指标可作A级快照；单片数据不外推全站趋势。" }
-      ,{ id: "aifestivals", name: "AI电影节官方站点池", region: "国际", category: "governance", cadence: "事件驱动",
-        role: "primary", url: "https://www.aaiff.ai/",
-        rule: "征片规则、入选与奖项分别核验；投稿量不等于合格作品数。" }
     ],
     refs: {
       pika: { label: "Pika Video Studio", url: "https://pika.art/" },

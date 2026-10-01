@@ -342,12 +342,6 @@ a:hover { color: var(--accent-dark); }
   .lane-card, .case-type, .empty-state { background: #fff; }
 }
 
-.archive-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
-.archive-card { border: 1px solid var(--line); border-radius: 1.25rem; padding: 1.4rem; background: var(--paper); }
-.archive-card h3 { margin: .5rem 0; }
-.archive-card p { color: var(--ink-soft); }
-.archive-card .source-links { margin-top: 1rem; }
-
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
