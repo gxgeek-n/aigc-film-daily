@@ -30,7 +30,7 @@
   ];
 
   const SOURCE_REGISTRY = {
-    version: "2026-10-04",
+    version: "2026-10-02",
     note:
       "来源池用于持续发现与交叉核验，不等同于当期证据。角色为“仅线索”的聚合来源不得单独支撑最终结论；一手来源的原始页面可作A级证据。",
     legend: [
@@ -160,17 +160,6 @@
       soulferry: { label: "《灵魂摆渡·浮生梦》分账披露", url: "https://m.thepaper.cn/newsDetail_forward_34106150" },
       noonai: { label: "正午阳光招聘报道", url: "https://cj.sina.com.cn/articles/view/5159017394/133805bb200101t1tq" },
       autodesk: { label: "Creative Bloq · Autodesk 连续性错误", url: "https://www.creativebloq.com/3d/autodesks-own-ai-film-has-a-continuity-error-nobody-could-prompt-away" }
-      ,runwaychangelog: { label: "Runway Product Changelog", url: "https://runway.com/changelog" }
-      ,googleads: { label: "Google Ads · Asset Studio", url: "https://blog.google/products/ads-commerce/creating-assets-youtube-ads/" }
-      ,vtr: { label: "VTR-Bench", url: "https://huggingface.co/papers/2610.01499" }
-      ,atr: { label: "Align Then Reason", url: "https://huggingface.co/papers/2610.00825" }
-      ,rowbench: { label: "PROWBench", url: "https://huggingface.co/papers/2610.02205" }
-      ,waicf: { label: "WAIFF September 2026 Winners", url: "https://worldaicinema.com/en/winners-september-2026/" }
-      ,astana2026: { label: "Astana AI Film Festival", url: "https://www.aaiff.ai/" }
-      ,astanatimes: { label: "Astana Times · AAIFF", url: "https://astanatimes.com/2026/10/astana-ai-film-festival-opens-new-chapter-for-cinema-industry/" }
-      ,biaoqian: { label: "B站《标签》作品页", url: "https://www.bilibili.com/video/BV1dChQ6XEaS/" }
-      ,col2026: { label: "中文在线2026年度定增预案", url: "https://static.cninfo.com.cn/finalpage/2026-10-01/1225590018.PDF" }
-      ,walulu: { label: "每日经济新闻 · AI漫剧与AI玩具", url: "https://www.nbd.com.cn/articles/2026-10-01/4596556.html" }
       ,varietylikeness: { label: "Variety · Robin Williams AI形象争议", url: "https://au.variety.com/2026/film/news/robin-williams-daughter-ai-videos-40584/" }
       ,mingxingrank: { label: "铭兴映画真人AI剧榜 · 2026-09-22", url: "https://app.mingxingwenhua.cn/zh-HK/real-ai-rank" }
       ,shortdramarank: { label: "Short Drama Data · 2026-09-22", url: "https://www.shortdramadata.com/zh/" }
