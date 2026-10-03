@@ -63,12 +63,6 @@
       { id: "github", name: "GitHub", region: "国际", category: "oss", cadence: "每日",
         role: "primary", url: "https://github.com/trending",
         rule: "发布日志与仓库变更可作A级；star、fork与更新时间不代表真实采用。" },
-      { id: "comfy-releases", name: "ComfyUI Releases", region: "国际", category: "oss", cadence: "版本驱动",
-        role: "primary", url: "https://github.com/Comfy-Org/ComfyUI/releases",
-        rule: "以正式Release核对节点、兼容性和移除项；第三方工作流仍需项目复测。" },
-      { id: "dramaclaw-releases", name: "DramaClaw Releases", region: "国内 / 国际", category: "oss", cadence: "版本驱动",
-        role: "primary", url: "https://github.com/dramaclaw/dramaclaw/releases",
-        rule: "Release可证明功能与修复发布；不把累计star或演示项目写成采用率。" },
       { id: "huggingface", name: "Hugging Face", region: "国际", category: "oss", cadence: "每日",
         role: "primary", url: "https://huggingface.co/papers",
         rule: "模型页可作原厂发布的A级证据；社区上传只证明存在，不等于原厂发布。" },
@@ -89,12 +83,6 @@
         role: "primary", url: "https://aifilmfest.org/",
         note: "示例入口；具体以各机构官方页面为准。",
         rule: "官方公告、章程与征片规则按A级；媒体转述降为C级。" },
-      { id: "waicf-official", name: "World AI Cinema Festival", region: "国际", category: "governance", cadence: "月度 / 事件驱动",
-        role: "primary", url: "https://worldaicinema.com/",
-        rule: "只以主办方结果页确认入选与获奖；制作工具和AI参与比例另行核验。" },
-      { id: "aifilmcontests", name: "AI Film Contests", region: "国际", category: "aggregator", cadence: "每日",
-        role: "discovery", url: "https://aifilmcontests.com/",
-        rule: "仅作电影节和征片日历线索；日期、规则、费用与奖项必须回到主办方页面。" },
       { id: "dataeye", name: "DataEye", region: "国内", category: "data", cadence: "每日 / 报告",
         role: "corroboration", url: "https://www.dataeye.com/report.html",
         rule: "自有榜单与自有口径数据作原始披露可作B级；媒体转述降为C级。" },
@@ -134,9 +122,6 @@
       ,{ id: "elevenlabs", name: "ElevenLabs Blog / API", region: "国际", category: "oss", cadence: "每周 / 事件驱动",
         role: "primary", url: "https://elevenlabs.io/blog",
         rule: "语音、视频与模板API发布按A级；演员声音授权需独立核验。" }
-      ,{ id: "reverie", name: "Reverie Movies Updates", region: "国际", category: "oss", cadence: "每周 / 事件驱动",
-        role: "primary", url: "https://www.reveriemovies.com/updates",
-        rule: "产品更新可证明厂商自述功能上线；稳定性、画质和成本仍需独立项目测试。" }
       ,{ id: "arxiv", name: "arXiv · 视频生成论文", region: "国际", category: "eval", cadence: "每日",
         role: "primary", url: "https://arxiv.org/list/cs.CV/recent",
         rule: "论文存在与版本日期按A级；性能结果为作者自报，不能写成独立复现。" }
@@ -190,15 +175,6 @@
       ,mingxingrank: { label: "铭兴映画真人AI剧榜 · 2026-09-22", url: "https://app.mingxingwenhua.cn/zh-HK/real-ai-rank" }
       ,shortdramarank: { label: "Short Drama Data · 2026-09-22", url: "https://www.shortdramadata.com/zh/" }
       ,scenetracerank: { label: "SceneTrace AI短剧Top 100 · 2026-09-18", url: "https://shortdramacast.com/zh-cn/rankings/ai-short-dramas" }
-      ,runwayads: { label: "Runway Ads", url: "https://runway.com/news/company-news/introducing-runway-ads" }
-      ,kling4: { label: "Kling 4.0", url: "https://kling.ai/blog/kling40-kling-visual-realism-creative-control-introducing-storytelling?tab=all" }
-      ,comfy038: { label: "ComfyUI v0.38.0", url: "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.38.0" }
-      ,pingyao: { label: "平遥36小时AI短片黑客松", url: "https://weibo.com/2/detail/5348160165381592" }
-      ,seedanceplan: { label: "Seedance影视创作合作计划", url: "https://www.ithome.com/1/007/867.htm" }
-      ,elevenapi: { label: "ElevenLabs Image, Video, and Templates APIs", url: "https://elevenlabs.io/blog/introducing-the-image-video-and-templates-apis" }
-      ,beijingweek: { label: "北京动画周AIGC挑战赛", url: "https://www.xinhuanet.com/zgjx/2019v/20260925/a938fe0f0f314c83a1e8e11a69755fa8/c.html" }
-      ,iqiyi: { label: "《灵魂摆渡》AIGC系列分账披露", url: "https://www.bjnews.com.cn/detail/1790248518129743.html" }
-      ,googlecodirector: { label: "Google Research · Coherent long-form video", url: "https://research.google/blog/coherent-long-form-video-generation/" }
     }
   };
 
